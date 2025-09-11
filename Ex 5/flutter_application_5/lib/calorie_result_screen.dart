@@ -30,19 +30,11 @@ class CalorieResultScreen extends StatelessWidget {
               elevation: 4,
               margin: EdgeInsets.all(10),
               child: ListTile(
-                leading: Icon(Icons.fork_left),
-                title: Text('Name:  ${user.name}'),
-                subtitle: Text('Age: ${user.age}'),
-              ),
-            ),
-
-            Card(
-              elevation: 4,
-              margin: EdgeInsets.all(10),
-              child: ListTile(
-                leading: Icon(Icons.person),
-                title: Text('Name:  ${user.name}'),
-                subtitle: Text('Age: ${user.age}'),
+                leading: Icon(Icons.food_bank),
+                title: Text('Consumed Calorie:  $totalcalorie'),
+                subtitle: Text('Remaining Calorie: $rem_cal'),
+                trailing: (rem_cal >= 0)? Text('You are within your daily goal', style: TextStyle(color: Colors.green, fontSize: 10),): Text('You exceeded your daily goal', style: TextStyle(color: Colors.red, fontSize: 10),
+                )
               ),
             ),
 
